@@ -11,10 +11,9 @@ export default {
         rubik: ['Rubik', 'sans-serif'],
         rozha: ['"Rozha One"', 'serif'],
       },
-      colors: {
-        'primary-blue': '#4A90E2',
-        'dark-bg': '#1a1a2e',
-        'darker-bg': '#16213e',
+       colors: {
+        primaryBlue: '#1A71F6',
+        borderGray: '#E7E7E7',
       },
       backgroundImage: {
         'hero-gradient': 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)',
