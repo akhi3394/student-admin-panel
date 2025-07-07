@@ -19,7 +19,7 @@ export default function Sidebar() {
   const location = useLocation();
 
   return (
-    <aside className="w-64 min-h-screen flex flex-col bg-white border-r border-gray-200">
+    <aside className="w-[280px] min-h-screen flex flex-col bg-white border-r border-gray-200">
       {/* Logo header */}
       <div className="bg-blue-700 flex items-center px-6 py-5">
         {/* <div className="bg-white rounded-full w-10 h-10 mr-3" /> */}

@@ -24,7 +24,7 @@ const data = [
 
 const Card = ({ title, value, highlight = false }) => (
   <div
-    className={`rounded-xl px-6 py-4 w-full  ${
+    className={`rounded-xl px-6 py-4 w-full h-[128px] ${
       highlight ? 'bg-[#0062FF] text-white' : 'bg-white text-gray-800'
     } shadow-sm flex flex-col justify-between`}
   >
@@ -46,36 +46,36 @@ const Card = ({ title, value, highlight = false }) => (
 
 const Dashboard = () => {
   return (
-    <div className="p-6 bg-[#F8F9FB] min-h-screen">
+    <div className=" bg-[#F8F9FB] min-h-screen">
       <h1 className="text-2xl font-semibold text-gray-800">Dashboard</h1>
       <p className="text-sm text-gray-400 mb-6">Dashboard</p>
 
-      <div className="grid grid-cols-2 gap-4 ">
-        {/* Left side: Four cards (50% width) */}
-        <div className="grid grid-cols-2 grid-rows-2 gap-4 h-[272px]">
+      <div className="grid grid-cols-2 gap-6 h-[272px]">
+        {/* Left side: Four cards (50% width, split into 2x2) */}
+        <div className="grid grid-cols-2 grid-rows-2 gap-6">
           {/* Card 1 */}
-          <div className="col-span-1 row-span-1 h-[128px]">
+          <div className="col-span-1 row-span-1">
             <Card title="Total School" value="150" highlight />
           </div>
 
           {/* Card 2 */}
-          <div className="col-span-1 row-span-1 h-[128px]">
+          <div className="col-span-1 row-span-1">
             <Card title="Total Student" value="5,000" />
           </div>
 
           {/* Card 3 */}
-          <div className="col-span-1 row-span-1 h-[128px]">
+          <div className="col-span-1 row-span-1">
             <Card title="Total Admin" value="5,000" />
           </div>
 
           {/* Card 4 */}
-          <div className="col-span-1 row-span-1 h-[128px]">
+          <div className="col-span-1 row-span-1">
             <Card title="Revenue" value="₹50,000.00" />
           </div>
         </div>
 
         {/* Right side: Chart (50% width) */}
-        <div className="col-span-1 row-span-1 bg-white rounded-xl p-6 shadow-sm ">
+        <div className="col-span-1 bg-white rounded-xl p-6 shadow-sm">
           <div className="flex justify-between items-center mb-4">
             <div>
               <h2 className="text-lg font-semibold text-gray-800">Your Sales this year</h2>
