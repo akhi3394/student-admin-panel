@@ -4,7 +4,7 @@ import LogoutIcon from '/Logout.svg'
 import ActiveBar from '/ActiveBar.svg'
 
 const sidebarItems = [
-  { label: "Dashboard", path: "/", icon: "dashboard.svg", activeIcon: "ActiveDashboard.svg" },
+  { label: "Dashboard", path: "/dashboard", icon: "dashboard.svg", activeIcon: "ActiveDashboard.svg" },
   { label: "School Management", path: "/school-management", icon: "SchoolManagement.svg", activeIcon: "ActiveSchoolManagement.svg" },
   { label: "Student Management", path: "/student-management", icon: "StudentManagement.svg", activeIcon: "ActiveStudentManagement.svg" },
   { label: "Admin Management", path: "/admin-management", icon: "AdminManagement.svg", activeIcon: "ActiveAdmin.svg" },
@@ -21,9 +21,9 @@ export default function Sidebar() {
   const location = useLocation();
 
   return (
-    <aside className="w-[280px] min-h-screen flex flex-col bg-white border-r border-gray-200">
+    <aside className="w-[280px] min-h-screen flex flex-col gap-3 bg-white border-r border-gray-200">
       {/* Logo header */}
-      <div className="bg-[#1A71F6] flex items-center px-6 py-5">
+      <div className="bg-[#1A71F6] h-[87px] flex items-center px-6 py-5">
         {/* <div className="bg-white rounded-full w-10 h-10 mr-3" /> */}
         <img src={Logo} alt="Logo" className="bg-white rounded-full w-10 h-10 mr-3" />
         <span className="text-white font-bold text-2xl">SMD</span>
@@ -49,7 +49,7 @@ export default function Sidebar() {
                     alt={`${item.label} icon`}
                     className="w-5 h-5 mr-3"
                   />
-                  <span>{item.label}</span>
+                  <span className="text-[16px]">{item.label}</span>
                 </NavLink>
               </li>
             );
