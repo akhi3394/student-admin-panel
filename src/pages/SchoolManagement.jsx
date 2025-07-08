@@ -227,7 +227,7 @@ const SchoolManagement = () => {
                       {row.totalStudents}
                     </td>
                     <td className="px-4 py-2 border-b border-[#E7E7E7] text-[14px] text-[#000]">
-                      <span className="px-2 py-1 bg-[#EFEFEF] rounded-full text-[12px]">{row.status}</span>
+                      <span className="px-2 py-1  rounded-full text-[12px] text-[#008000] font-semibold">{row.status}</span>
                     </td>
                     <td className="px-4 py-2 border-b border-[#E7E7E7]">
                       <div className="flex space-x-2 text-[#1A1A1A]">
