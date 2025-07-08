@@ -4,7 +4,7 @@ import darkTheme from '/darktheme.svg';
 import lightTheme from '/lightTheme.svg';
 import lightMode from '/lightMode.svg'
 import { useState } from 'react';
-import { Search } from 'lucide-react';
+import SearchIcon from '/SearchIcon.svg'
 
 export default function Navbar() {
   const [isDark, setIsDark] = useState(true);
@@ -21,7 +21,7 @@ export default function Navbar() {
           className="w-full h-full rounded-[12px] border border-gray-300 pl-4 pr-10 text-sm placeholder-[#949494] focus:outline-none"
         />
         <span className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm">
-          <Search/>
+          <img src={SearchIcon} alt="SearchIcon" className='w-[24px] h-[24px]' />
         </span>
       </div>
 
@@ -33,9 +33,8 @@ export default function Navbar() {
           className="flex items-center w-[60px] h-[28px] bg-[#1A71F6] rounded-full px-[4px] relative transition-all duration-300"
         >
           <div
-            className={`w-[20px] h-[20px] rounded-full bg-white shadow-md transition-all duration-300 ${
-              isDark ? 'translate-x-0' : 'translate-x-[28px]'
-            }`}
+            className={`w-[20px] h-[20px] rounded-full bg-white shadow-md transition-all duration-300 ${isDark ? 'translate-x-0' : 'translate-x-[28px]'
+              }`}
           ></div>
           <img
             src={lightMode}
