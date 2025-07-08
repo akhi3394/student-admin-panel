@@ -24,14 +24,14 @@ const data = [
 
 const Card = ({ title, value, highlight = false }) => (
   <div
-    className={`rounded-xl px-6 py-4 w-full h-[128px] ${
-      highlight ? 'bg-[#0062FF] text-white' : 'bg-white text-gray-800'
-    } shadow-sm flex flex-col justify-between`}
+    className={`rounded-xl px-6 py-4 w-full h-[128px]  ${
+      highlight ? 'bg-[#0062FF] text-white' : 'bg-white text-[#454545]'
+    } shadow-sm flex flex-col justify-between border border-[#E7E7E7]`}
   >
     <div className="flex items-center justify-between text-sm font-medium">
-      <span>{title}</span>
+      <span className='font-semibold'>{title}</span>
       <svg
-        className="w-3 h-3"
+        className="w-6 h-6"
         fill="none"
         stroke={highlight ? '#fff' : '#333'}
         strokeWidth="2"
@@ -40,19 +40,19 @@ const Card = ({ title, value, highlight = false }) => (
         <path d="M17 7L7 17M7 7h10v10" />
       </svg>
     </div>
-    <div className="text-2xl font-semibold">{value}</div>
+    <div className={`text-[32px] text-start font-semibold ${!highlight ? 'text-[#1A71F6]' : 'text-white' }`}>{value}</div>
   </div>
 );
 
 const Dashboard = () => {
   return (
-    <div className=" bg-[#F8F9FB] min-h-screen">
-      <h1 className="text-2xl font-semibold text-gray-800">Dashboard</h1>
-      <p className="text-sm text-gray-400 mb-6">Dashboard</p>
+    <div className=" min-h-screen">
+      <h1 className="text-2xl font-semibold text-gray-800 text-start">Dashboard</h1>
+      <p className="text-sm text-gray-400 mb-6 text-start">Dashboard</p>
 
-      <div className="grid grid-cols-2 gap-6 h-[272px]">
+      <div className="grid grid-cols-2 gap-6 ">
         {/* Left side: Four cards (50% width, split into 2x2) */}
-        <div className="grid grid-cols-2 grid-rows-2 gap-6">
+        <div className="grid grid-cols-2 grid-rows-2 gap-6 h-[272px]">
           {/* Card 1 */}
           <div className="col-span-1 row-span-1">
             <Card title="Total School" value="150" highlight />
@@ -75,27 +75,27 @@ const Dashboard = () => {
         </div>
 
         {/* Right side: Chart (50% width) */}
-        <div className="col-span-1 bg-white rounded-xl p-6 shadow-sm">
+        <div className="col-span-1 bg-white rounded-xl p-2 shadow-sm h-[272px] border border-[#E7E7E7]">
           <div className="flex justify-between items-center mb-4">
             <div>
-              <h2 className="text-lg font-semibold text-gray-800">Your Sales this year</h2>
+              <h2 className="text-[16px] font-semibold text-[#454545]">Your Sales this year</h2>
               <div className="flex items-center mt-2 gap-4 text-sm">
-                <div className="flex items-center gap-1">
-                  <span className="w-3 h-3 bg-[#A8E043] inline-block rounded-sm"></span>
+                <div className="flex items-center gap-1 text-[#737373]">
+                  <span className="w-3 h-3 bg-[#A8E043] inline-block rounded-sm "></span>
                   Income
                 </div>
-                <div className="flex items-center gap-1">
-                  <span className="w-3 h-3 bg-[#0062FF] inline-block rounded-sm"></span>
+                <div className="flex items-center gap-1 text-[#737373]">
+                  <span className="w-3 h-3 bg-[#0062FF] inline-block rounded-sm "></span>
                   Expense
                 </div>
               </div>
             </div>
-            <div className="flex items-center text-sm text-[#0062FF] font-medium cursor-pointer">
+            <div className="flex items-center text-[12px] text-[#3D3D3D] font-medium cursor-pointer">
               Show All
               <svg
-                className="w-3 h-3 ml-1"
+                className="w-6 h-6 ml-1"
                 fill="none"
-                stroke="#0062FF"
+                stroke="#3D3D3D"
                 strokeWidth="2"
                 viewBox="0 0 24 24"
               >

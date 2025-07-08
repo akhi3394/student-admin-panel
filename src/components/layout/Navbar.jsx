@@ -2,6 +2,7 @@ import NavMessage from '/NavMessage.svg';
 import profile from '/dummyProfile.svg';
 import darkTheme from '/darktheme.svg';
 import lightTheme from '/lightTheme.svg';
+import lightMode from '/lightMode.svg'
 import { useState } from 'react';
 
 export default function Navbar() {
