@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaEye, FaEdit, FaTrash } from 'react-icons/fa';
 import downArrow from '/downArrow.svg'
 import upArrrow from '/upArrow.svg'
@@ -47,6 +47,16 @@ const data = [
 ];
 
 const AdminManagement = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const handleCreateAdminClick = () => {
+    setIsPopupOpen(true);
+  };
+
+  const handleClosePopup = () => {
+    setIsPopupOpen(false);
+  };
+
   return (
     <>
       <div className="flex justify-between mb-5 py-2">
@@ -73,7 +83,7 @@ const AdminManagement = () => {
               <span className="text-[#000] text-[14px] cursor-pointer font-jakarta">Export</span>
               <img src={Export} alt="export" />
             </div>
-            <button className='rounded-[8px] px-5 py-2 flex items-center text-white bg-[#1A71F6] text-[14px] font-bold font-jakarta'>
+            <button className='rounded-[8px] px-5 py-2 flex items-center text-white bg-[#1A71F6] text-[14px] font-bold font-jakarta' onClick={handleCreateAdminClick}>
               <span className='text-[20px] flex items-center'><img src={plus} alt="plus" className='w-[24px] h-[24px]' /></span>
               Create Admin
             </button>
@@ -204,6 +214,49 @@ const AdminManagement = () => {
           </table>
         </div>
       </div>
+
+      {isPopupOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-[16px] w-[763px] h-[542px] p-6 relative shadow-lg">
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="text-[18px] font-semibold text-[#000] font-jakarta">Create Admin</h2>
+              <button onClick={handleClosePopup} className="text-red-500 text-[20px] font-bold">&times;</button>
+            </div>
+            <div className="space-y-4">
+              <div>
+                <label className="block text-[14px] text-[#454545] font-jakarta mb-1 text-start">Name</label>
+                <input type="text" placeholder="Enter Name" className="w-full h-[40px] border border-[#E7E7E7] rounded-[8px] px-3 text-[14px] text-[#000] font-jakarta focus:outline-none" />
+              </div>
+              <div>
+                <label className="block text-[14px] text-[#454545] font-jakarta mb-1 text-start">Number</label>
+                <input type="text" placeholder="Enter Number" className="w-full h-[40px] border border-[#E7E7E7] rounded-[8px] px-3 text-[14px] text-[#000] font-jakarta focus:outline-none" />
+              </div>
+              <div>
+                <label className="block text-[14px] text-[#454545] font-jakarta mb-1 text-start">Email</label>
+                <input type="text" placeholder="Enter Email" className="w-full h-[40px] border border-[#E7E7E7] rounded-[8px] px-3 text-[14px] text-[#000] font-jakarta focus:outline-none" />
+              </div>
+              <div>
+                <label className="block text-[14px] text-[#454545] font-jakarta mb-1 text-start">School</label>
+                <select className="w-full h-[40px] border border-[#E7E7E7] rounded-[8px] px-3 text-[14px] text-[#000] font-jakarta focus:outline-none appearance-none bg-white">
+                  <option>Select School</option>
+                  <option>Select School</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-[14px] text-[#454545] font-jakarta mb-1 text-start">Role</label>
+                <select className="w-full h-[40px] border border-[#E7E7E7] rounded-[8px] px-3 text-[14px] text-[#000] font-jakarta focus:outline-none appearance-none bg-white">
+                  <option>Select Role</option>
+                  <option>Select Role</option>
+                </select>
+              </div>
+            </div>
+            <div className="flex justify-center mt-6 space-x-4">
+              <button className="px-4 py-2 bg-gray-200 rounded-[8px] text-[14px] text-[#000] font-jakarta">Clear</button>
+              <button className="px-4 py-2 bg-[#1A71F6] rounded-[8px] text-[14px] text-white font-jakarta">Save</button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };
