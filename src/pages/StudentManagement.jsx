@@ -61,19 +61,19 @@ const StudentManagement = () => {
             <input
               type="text"
               placeholder="Search for id, Student Name School Name"
-              className="w-full h-full rounded-[12px] border border-gray-300 pl-4 pr-10 text-sm placeholder-[#949494] focus:outline-none"
+              className="w-full h-full rounded-[12px] border border-gray-300 pl-4 pr-10 text-sm placeholder-[#949494] focus:outline-none font-jakarta"
             />
-            <span className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm">
+            <span className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm font-jakarta">
               <img src={SearchIcon} alt="SearchIcon" className='w-[24px] h-[24px]'/>
             </span>
           </div>
           <span className='flex gap-4 items-center'>
             <div className="flex gap-2 border border-[#B0B0B0] py-2 px-2 rounded-[12px] items-center">
-              <span className="text-[#000] text-[14px] cursor-pointer">Filter</span>
+              <span className="text-[#000] text-[14px] cursor-pointer font-jakarta">Filter</span>
               <img src={filterIcon} alt="filter" />
             </div>
             <div className="flex gap-2 border border-[#B0B0B0] py-2 px-2 rounded-[12px] items-center">
-              <span className="text-[#000] text-[14px] cursor-pointer">Export</span>
+              <span className="text-[#000] text-[14px] cursor-pointer font-jakarta">Export</span>
               <img src={Export} alt="export" />
             </div>
           </span>
@@ -81,16 +81,14 @@ const StudentManagement = () => {
         <div className="rounded-[16px] overflow-x-auto custom-scrollbar w-full border border-[#E7E7E7]">
           <table className="w-full text-left border-collapse min-w-[1200px] table-auto">
             <thead>
-              <tr className="bg-[#F6F6F6] text-[#454545] text-[14px] h-[65px] font-medium">
-                <th className="px-4 py-2 border-b border-[#E7E7E7]">
+              <tr className="bg-[#F6F6F6] text-[#454545] text-[14px] h-[65px] font-medium font-jakarta">
+                <th className="px-4 py-2 border-b border-[#E7E7E7] text-[#454545] font-jakarta">
                   <input
                     type="checkbox"
                     className="appearance-none w-5 h-5 border-2 border-[#454545] rounded-md checked:bg-[#454545] checked:border-[#454545] checked:appearance-auto cursor-pointer"
                   />                            
                 </th>
-
-                {/* Photo column with sorting arrows */}
-                <th className="px-4 py-2 border-b border-[#E7E7E7]">
+                <th className="px-4 py-2 border-b border-[#E7E7E7] text-[#454545] font-jakarta">
                   <div className="flex items-center gap-5">
                     Photo
                     <div className="flex flex-col">
@@ -99,9 +97,7 @@ const StudentManagement = () => {
                     </div>
                   </div>
                 </th>
-
-                {/* Student Name */}
-                <th className="px-4 py-2 border-b border-[#E7E7E7]">
+                <th className="px-4 py-2 border-b border-[#E7E7E7] text-[#454545] font-jakarta">
                   <div className="flex items-center gap-5">
                     Student Name
                     <div className="flex flex-col">
@@ -110,9 +106,7 @@ const StudentManagement = () => {
                     </div>
                   </div>
                 </th>
-
-                {/* School */}
-                <th className="px-4 py-2 border-b border-[#E7E7E7]">
+                <th className="px-4 py-2 border-b border-[#E7E7E7] text-[#454545] font-jakarta">
                   <div className="flex items-center gap-5">
                     School
                     <div className="flex flex-col">
@@ -121,9 +115,7 @@ const StudentManagement = () => {
                     </div>
                   </div>
                 </th>
-
-                {/* Class */}
-                <th className="px-4 py-2 border-b border-[#E7E7E7]">
+                <th className="px-4 py-2 border-b border-[#E7E7E7] text-[#454545] font-jakarta">
                   <div className="flex items-center gap-5">
                     Class
                     <div className="flex flex-col">
@@ -132,9 +124,7 @@ const StudentManagement = () => {
                     </div>
                   </div>
                 </th>
-
-                {/* Location */}
-                <th className="px-4 py-2 border-b border-[#E7E7E7]">
+                <th className="px-4 py-2 border-b border-[#E7E7E7] text-[#454545] font-jakarta">
                   <div className="flex items-center gap-5">
                     Location
                     <div className="flex flex-col">
@@ -143,9 +133,7 @@ const StudentManagement = () => {
                     </div>
                   </div>
                 </th>
-
-                {/* Payment */}
-                <th className="px-4 py-2 border-b border-[#E7E7E7]">
+                <th className="px-4 py-2 border-b border-[#E7E7E7] text-[#454545] font-jakarta">
                   <div className="flex items-center gap-5">
                     Payment
                     <div className="flex flex-col">
@@ -154,11 +142,7 @@ const StudentManagement = () => {
                     </div>
                   </div>
                 </th>
-
-        
-
-                {/* Action column */}
-                <th className="px-4 py-2 border-b border-[#E7E7E7]">
+                <th className="px-4 py-2 border-b border-[#E7E7E7] text-[#454545] font-jakarta">
                   <div className="flex items-center gap-5">
                     <span>Action</span>
                     <span>
@@ -168,58 +152,54 @@ const StudentManagement = () => {
                 </th>
               </tr>
             </thead>
-
             <tbody>
               {data.map((row, index) => {
                 const [studentCode, ...studentNameParts] = row.StudentName.split(' ');
                 const studentName = studentNameParts.join(' ');
 
-                 const [schoolCode, ...schoolParts] = row.School.split(' ');
+                const [schoolCode, ...schoolParts] = row.School.split(' ');
                 const SchoolName = schoolParts.join(' ');
 
                 const [locationCity, ...locationStateParts] = row.location.split(' ');
                 const locationState = locationStateParts.join(' ');
 
-
                 return (
                   <tr key={index} className="h-[60px] bg-white">
-                    <td className="px-4 py-2 border-b border-[#E7E7E7]">
+                    <td className="px-4 py-2 border-b border-[#E7E7E7] text-[#454545] font-jakarta">
                       <input
                         type="checkbox"
                         className="appearance-none w-5 h-5 border-2 border-[#454545] rounded-md checked:bg-[#454545] checked:border-[#454545] checked:appearance-auto cursor-pointer"
                       />                                        
                     </td>
-                    <td className="px-4 py-2 border-b border-[#E7E7E7]">
+                    <td className="px-4 py-2 border-b border-[#E7E7E7] text-[#454545] font-jakarta">
                       <div className="w-[40px] h-[40px] bg-[#E7E7E7] rounded" />
                     </td>
-                    <td className="px-4 py-2 border-b border-[#E7E7E7] text-[14px] text-[#000]">
+                    <td className="px-4 py-2 border-b border-[#E7E7E7] text-[14px] text-[#454545] font-jakarta">
                       <div className="flex flex-col leading-tight">
-                        <span className="text-[#1A71F6]">{studentCode}</span>
-                        <span>{studentName}</span>
+                        <span className="text-[#1A71F6] font-jakarta">{studentCode}</span>
+                        <span font-jakarta>{studentName}</span>
                       </div>
                     </td>
-                    <td className="px-4 py-2 border-b border-[#E7E7E7] text-[14px] text-[#000]">
-                    
+                    <td className="px-4 py-2 border-b border-[#E7E7E7] text-[14px] text-[#454545] font-jakarta">
                       <div className="flex flex-col leading-tight">
-                        <span className="text-[#1A71F6]">{schoolCode}</span>
-                        <span>{SchoolName}</span>
+                        <span className="text-[#1A71F6] font-jakarta">{schoolCode}</span>
+                        <span font-jakarta>{SchoolName}</span>
                       </div>
                     </td>
-                    <td className="px-4 py-2 border-b border-[#E7E7E7] text-[14px] text-[#000]">
+                    <td className="px-4 py-2 border-b border-[#E7E7E7] text-[14px] text-[#454545] font-jakarta">
                       {row.Class}
                     </td>
-                    <td className="px-4 py-2 border-b border-[#E7E7E7] text-[14px] text-[#000]">
+                    <td className="px-4 py-2 border-b border-[#E7E7E7] text-[14px] text-[#454545] font-jakarta">
                       <div className="flex flex-col leading-tight">
-                        <span>{locationCity}</span>
-                        <span>{locationState}</span>
+                        <span font-jakarta>{locationCity}</span>
+                        <span font-jakarta>{locationState}</span>
                       </div>
                     </td>
-                    <td className="px-4 py-2 border-b border-[#E7E7E7] text-[14px] text-[#000]">
+                    <td className="px-4 py-2 border-b border-[#E7E7E7] text-[14px] text-[#454545] font-jakarta">
                       {row.Payment}
                     </td>
-
-                    <td className="px-4 py-2 border-b border-[#E7E7E7]">
-                      <div className="flex space-x-2 text-[#1A1A1A]">
+                    <td className="px-4 py-2 border-b border-[#E7E7E7] text-[#454545] font-jakarta">
+                      <div className="flex space-x-2">
                         <img src={EyeIcon} alt="EyeIcon" className='w-[24px] h-[24px]' />
                         <img src={EditIcon} alt="EditIcon" className='w-[24px] h-[24px]' />
                         <img src={DeleteIcon} alt="DeleteIcon" className='w-[24px] h-[24px]' />
