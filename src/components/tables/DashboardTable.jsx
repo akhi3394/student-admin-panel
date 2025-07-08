@@ -48,7 +48,7 @@ const data = [
 
 const DashboardTable = () => {
     return (
-        <div className="w-full overflow-x-auto  bg-white p-4 rounded-xl shadow-[0px_1.97px_6.47px_0px_rgba(0,0,0,0.03),0px_9px_18.2px_0px_rgba(0,0,0,0.05),0px_22.78px_48.83px_0px_rgba(0,0,0,0.06),0px_45px_112px_0px_rgba(0,0,0,0.09)] custom-scrollbar">
+        <div className="w-full overflow-x-auto  bg-white p-4 rounded-[16px] custom-scrollbar border border-[#E7E7E7]">
             <div className="flex justify-between items-center px-4 py-2 mb-5">
                 <h2 className="text-[#454545] text-[16px] font-semibold">Top Schools</h2>
                 <span className='flex gap-4 items-center'>
@@ -64,7 +64,7 @@ const DashboardTable = () => {
                     </svg>
                 </span>
             </div>
-            <div className="rounded-[16px] overflow-x-auto custom-scrollbar w-full">
+            <div className="rounded-[16px] overflow-x-auto custom-scrollbar w-full border border-[#E7E7E7]">
                 <table className="w-full text-left border-collapse min-w-[1200px] table-auto">
                     <thead>
                         <tr className="bg-[#F6F6F6] text-[#454545] text-[14px] h-[65px] font-medium">
