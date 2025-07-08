@@ -10,8 +10,12 @@ export default {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         rubik: ['Rubik', 'sans-serif'],
         rozha: ['"Rozha One"', 'serif'],
+        poppins: ['Poppins', 'sans-serif'],
+        jakarta: ['"Plus Jakarta Sans"', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
+        manrope: ['Manrope', 'sans-serif'],
       },
-       colors: {
+      colors: {
         primaryBlue: '#1A71F6',
         borderGray: '#E7E7E7',
       },
@@ -24,4 +28,3 @@ export default {
   },
   plugins: [],
 }
-  

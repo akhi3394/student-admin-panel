@@ -6,6 +6,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from 'recharts';
+import DashboardTable from '../components/tables/DashboardTable';
 
 const data = [
   { name: 'Jan', income: 0, expense: 0 },
@@ -50,7 +51,7 @@ const Dashboard = () => {
       <h1 className="text-2xl font-semibold text-gray-800 text-start">Dashboard</h1>
       <p className="text-sm text-gray-400 mb-6 text-start">Dashboard</p>
 
-      <div className="grid grid-cols-2 gap-6 ">
+      <div className="grid grid-cols-2 gap-6 mb-5">
         {/* Left side: Four cards (50% width, split into 2x2) */}
         <div className="grid grid-cols-2 grid-rows-2 gap-6 h-[272px]">
           {/* Card 1 */}
@@ -141,6 +142,7 @@ const Dashboard = () => {
           </ResponsiveContainer>
         </div>
       </div>
+      <DashboardTable/>
     </div>
   );
 };
