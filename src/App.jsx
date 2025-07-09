@@ -14,6 +14,7 @@ import FAQs from './pages/FAQs';
 import Feedback from './pages/Feedback';
 import GeneralSetting from './pages/GeneralSetting';
 import Login from './pages/Login';
+import BillingDetail from './components/SubscriptionBilling/BillingDetail';
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/student-management" element={<StudentManagement />} />
         <Route path="/admin-management" element={<AdminManagement />} />
         <Route path="/billing" element={<SubscriptionBilling />} />
+        <Route path="/billing/:id" element={<BillingDetail />} /> {/* Dynamic route for billing details */}
         <Route path="/rbac" element={<RBAC />} />
         <Route path="/notifications" element={<Notifications />} />
         <Route path="/messages" element={<Messages />} />

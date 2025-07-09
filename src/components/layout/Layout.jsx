@@ -12,7 +12,7 @@ const Layout = () => {
         <Navbar />
         <div className="flex-1 overflow-y-auto pt-[87px]">
           {/* Add overflow-x-auto wrapper here */}
-          <div className="overflow-x-auto h-full px-4">
+          <div className="overflow-x-auto h-full p-6">
             <Outlet />
           </div>
         </div>

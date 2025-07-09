@@ -9,6 +9,7 @@ import filterIcon from '/filterIcon.svg';
 import Export from '/Export.svg';
 import SearchIcon from '/SearchIcon.svg';
 import ActionIcon from '/ActionIcon.svg'
+import { useNavigate } from 'react-router-dom';
 
 const data = [
     {
@@ -46,6 +47,11 @@ const data = [
 ];
 
 const SubscriptionTab = () => {
+    const navigate = useNavigate();
+
+    const handleEyeClick = (id) => {
+        navigate(`/billing/${id}`);
+    };
     return (
         <>
             <div className="w-full overflow-x-auto bg-white p-4 rounded-[16px] custom-scrollbar ">
@@ -174,7 +180,7 @@ const SubscriptionTab = () => {
                                     </td>
                                     <td className="px-4 py-2 border-b border-[#E7E7E7] text-[#454545] font-jakarta">
                                         <div className="flex space-x-2">
-                                            <img src={EyeIcon} alt="EyeIcon" className='w-[24px] h-[24px]' />
+                                            <img src={EyeIcon} alt="EyeIcon" className='w-[24px] h-[24px] cursor-pointer' onClick={() => handleEyeClick(index)}/>
                                             <img src={EditIcon} alt="EditIcon" className='w-[24px] h-[24px]' />
                                             <img src={DeleteIcon} alt="DeleteIcon" className='w-[24px] h-[24px]' />
                                         </div>
