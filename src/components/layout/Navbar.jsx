@@ -2,9 +2,9 @@ import NavMessage from '/NavMessage.svg';
 import profile from '/dummyProfile.svg';
 import darkTheme from '/darktheme.svg';
 import lightTheme from '/lightTheme.svg';
-import lightMode from '/lightMode.svg'
+import lightMode from '/lightMode.svg';
 import { useState } from 'react';
-import SearchIcon from '/SearchIcon.svg'
+import SearchIcon from '/SearchIcon.svg';
 
 export default function Navbar() {
   const [isDark, setIsDark] = useState(true);
@@ -12,16 +12,16 @@ export default function Navbar() {
   const toggleTheme = () => setIsDark(prev => !prev);
 
   return (
-    <header className="flex items-center justify-between px-6 py-3 h-[87px] bg-white shadow-md w-full z-50">
+    <header className="fixed top-0 left-[280px] right-0 z-50 h-[87px] bg-white shadow-md flex items-center justify-between px-6">
       {/* Search */}
-      <div className="relative w-[300px] h-[40px] mx-10">
+      <div className="relative w-3/12 h-[40px] mx-10">
         <input
           type="text"
           placeholder="Search product"
           className="w-full h-full rounded-[12px] border border-gray-300 pl-4 pr-10 text-sm placeholder-[#949494] focus:outline-none"
         />
         <span className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm">
-          <img src={SearchIcon} alt="SearchIcon" className='w-[24px] h-[24px]' />
+          <img src={SearchIcon} alt="SearchIcon" className="w-[24px] h-[24px]" />
         </span>
       </div>
 

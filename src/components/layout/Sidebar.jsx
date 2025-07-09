@@ -21,7 +21,7 @@ export default function Sidebar() {
   const location = useLocation();
 
   return (
-    <aside className="w-[280px] min-h-screen flex flex-col gap-3 bg-white border-r border-gray-200 font-poppins">
+    <aside className="w-[280px] fixed top-0 left-0 xl:h-[727px]  flex flex-col gap-3 bg-white border-r border-gray-200 font-poppins">
       {/* Logo Section */}
       <div className="bg-[#1A71F6] h-[87px] flex items-center px-6 py-5">
         <img src={Logo} alt="Logo" className="bg-white rounded-full w-10 h-10 mr-3" />
