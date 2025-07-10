@@ -15,6 +15,8 @@ import Feedback from './pages/Feedback';
 import GeneralSetting from './pages/GeneralSetting';
 import Login from './pages/Login';
 import BillingDetail from './components/SubscriptionBilling/BillingDetail';
+import AddSchool from './components/SchoolManagement/AddSchool';
+import SchoolDetails from './components/SchoolManagement/SchoolDetails';
 
 const App = () => {
   return (
@@ -25,8 +27,11 @@ const App = () => {
       {/* Routes with Layout (Sidebar + Header) */}
       <Route element={<Layout />}>
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/school-management" element={<SchoolManagement />} />
-        <Route path="/student-management" element={<StudentManagement />} />
+        <Route path="/school-management">
+          <Route index element={<SchoolManagement />} />
+          <Route path="add" element={<AddSchool />} />
+          <Route path=":id" element={<SchoolDetails />} />
+        </Route>        <Route path="/student-management" element={<StudentManagement />} />
         <Route path="/admin-management" element={<AdminManagement />} />
         <Route path="/billing" element={<SubscriptionBilling />} />
         <Route path="/billing/:id" element={<BillingDetail />} /> {/* Dynamic route for billing details */}

@@ -14,6 +14,8 @@ export default {
         jakarta: ['"Plus Jakarta Sans"', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
         manrope: ['Manrope', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
+
       },
       colors: {
         primaryBlue: '#1A71F6',

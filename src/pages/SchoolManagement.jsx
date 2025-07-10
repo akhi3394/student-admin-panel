@@ -10,9 +10,11 @@ import plus from '/plus.svg'
 import filterIcon from '/filterIcon.svg'
 import Export from '/Export.svg'
 import SearchIcon from '/SearchIcon.svg'
+import { useNavigate } from 'react-router-dom';
 
 const data = [
   {
+    id:1,
     logo: '',
     schoolNameCode: 'GVPS-998 Vidhya Vikas Ma...',
     board: 'CBSE',
@@ -22,6 +24,7 @@ const data = [
     status: 'Active'
   },
   {
+    id:2,
     logo: '',
     schoolNameCode: 'GVPS-998 Vidhya Vikas Ma...',
     board: 'CBSE',
@@ -31,6 +34,7 @@ const data = [
     status: 'Active'
   },
   {
+    id:3,
     logo: '',
     schoolNameCode: 'GVPS-998 Vidhya Vikas Ma...',
     board: 'CBSE',
@@ -40,6 +44,7 @@ const data = [
     status: 'Active'
   },
   {
+    id:4,
     logo: '',
     schoolNameCode: 'GVPS-998 Vidhya Vikas Ma...',
     board: 'CBSE',
@@ -51,11 +56,14 @@ const data = [
 ];
 
 const SchoolManagement = () => {
+    const navigate = useNavigate();
+
   return (
     <>
       <div className="flex justify-between mb-5 py-2">
         <p className='text-[24px] font-semibold text-[#000000] font-jakarta'>School List</p>
-        <button className='rounded-[8px] px-5 py-1 flex items-center text-white bg-[#1A71F6] text-[14px] font-bold font-jakarta'>
+        <button className='rounded-[8px] px-5 py-1 flex items-center text-white bg-[#1A71F6] text-[14px] font-bold font-jakarta'
+         onClick={() => navigate('/school-management/add')}>
           Add School
           <span className='text-[20px] flex items-center'><img src={plus} alt="plus" className='w-[24px] h-[24px]' /></span></button>
       </div>
@@ -216,7 +224,7 @@ const SchoolManagement = () => {
                     </td>
                     <td className="px-4 py-2 border-b border-[#E7E7E7] text-[#454545] font-jakarta">
                       <div className="flex space-x-2">
-                        <img src={EyeIcon} alt="EyeIcon" className='w-[24px] h-[24px]' />
+                        <img src={EyeIcon} alt="EyeIcon" className='w-[24px] h-[24px]' onClick={() => navigate(`/school-management/${row.id}`)}/>
                         <img src={EditIcon} alt="EditIcon" className='w-[24px] h-[24px]' />
                         <img src={DeleteIcon} alt="DeleteIcon" className='w-[24px] h-[24px]' />
                       </div>
