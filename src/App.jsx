@@ -17,6 +17,10 @@ import Login from './pages/Login';
 import BillingDetail from './components/SubscriptionBilling/BillingDetail';
 import AddSchool from './components/SchoolManagement/AddSchool';
 import SchoolDetails from './components/SchoolManagement/SchoolDetails';
+import AddStudent from './components/StudentManagement/AddStudent';
+import StudentDetails from './components/StudentManagement/StudentDetails';
+import MarkSheet from './components/StudentManagement/MarkSheet';
+import AttendanceCalendar from './components/StudentManagement/AttendanceCalendar';
 
 const App = () => {
   return (
@@ -31,7 +35,15 @@ const App = () => {
           <Route index element={<SchoolManagement />} />
           <Route path="add" element={<AddSchool />} />
           <Route path=":id" element={<SchoolDetails />} />
-        </Route>        <Route path="/student-management" element={<StudentManagement />} />
+        </Route>   
+        <Route path="/student-management">
+          <Route index element={<StudentManagement />} />
+          <Route path="add" element={<AddStudent/>} />
+          <Route path=":id" element={<StudentDetails/>} />
+          <Route path="mark-sheet" element={<MarkSheet/>} />
+          <Route path="attendance" element={<AttendanceCalendar/>} />
+        </Route>       
+        {/* <Route path="/student-management" element={<StudentManagement />} /> */}
         <Route path="/admin-management" element={<AdminManagement />} />
         <Route path="/billing" element={<SubscriptionBilling />} />
         <Route path="/billing/:id" element={<BillingDetail />} /> {/* Dynamic route for billing details */}
